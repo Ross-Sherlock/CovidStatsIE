@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="./dashboard.js" defer></script>
+  <title>COVID Dashboard</title>
+  
+<!-- Temporary padding left on body -->
+</head>
+<body>
+  <header>
+  <h1>COVID Vaccination Dashboard IE</h1>
+  </header>
+
+    <div id = "pageContainer">
+      <h2 class = "failed" id="failed1" style="color:rgb(236, 22, 22)">Failed to load weekly vaccine data, try again.</h2>
+      
+      <div class="select">
+        <select id="dropdownItems"></select>
+        <p style="text-align: center;">Select a week from dropdown</p>
+        <div id="total">
+            <div class= column>
+              <p class = "total-title" id="cum-total-title">Total Vaccines Administered in 2021</p>
+              <p id = "cum-total" class="number">-</p>
+            </div>
+          </div>
+          <div id="totalWeekly">
+            <div class="column">
+              <p class="total-title">Total Weekly Vaccines</p>
+              <p id="total-weekly" class="number"></p>
+              <div id = "biotechCompanies">
+                <div class = "four-column">
+                  <p id="moderna">Moderna</p>
+                  <p id="modernaNum" class="bioNum">-</p>
+                </div>
+                <div class = "four-column">
+                  <p id="pfizer">Pfizer</p>
+                  <p id="pfizerNum" class="bioNum">-</p>
+                </div>
+                <div class = "four-column">
+                  <p id = "janssen">Janssen</p>
+                  <p id="janssenNum" class="bioNum">-</p>
+                </div>
+                <div class = "four-column">
+                  <p id = "astra">AstraZeneca</p>
+                  <p id = "astraNum" class="bioNum">-</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <h2 id = "ageTitle" style="margin-bottom: 1%; margin-top:1%;">Fully Vaccinated by Age</h2>
+            <input type="checkbox" id="percentage" name="percentage">
+            <label for="percentage">Percentage</label>
+            
+              <div class="flexRow">
+                <div class = "ageColumn">
+                  <p class="ageRange">10-19yrs</p>
+                  <p id = "age10to19" class="ageNum">-</p>
+                </div>
+                <div class = "ageColumn">
+                  <p class="ageRange">20-29yrs</p>
+                  <p id = "age20to29" class="ageNum">-</p>
+                </div>
+                <div class="ageColumn">
+                  <p class="ageRange">30-39yrs</p>
+                  <p id = "age30to39" class="ageNum">-</p>
+                </div>
+                <div class="ageColumn">
+                  <p class="ageRange">40-49yrs</p>
+                  <p id = "age40to49" class="ageNum">-</p>
+                </div>
+              </div>
+              <div class = "flexRow">
+                <div class="ageColumn">
+                  <p class="ageRange">50-59yrs</p>
+                  <p id = "age50to59" class="ageNum">-</p>
+                </div>
+                <div class="ageColumn">
+                  <p class="ageRange">60-69yrs</p>
+                  <p id = "age60to69" class="ageNum">-</p>
+                </div>
+                <div class="ageColumn">
+                  <p class="ageRange">70-79yrs</p>
+                  <p id = "age70to79" class="ageNum">-</p>
+                </div>
+                <div class = "ageColumn">
+                  <p class="ageRange">80+yrs</p>
+                <p id = "age80" class="ageNum">-</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="countyContainer">
+          <h2 class="failed" id="failed2" style="color:rgb(236, 22, 22)">Failed to load county vaccine data, try again.</h2>
+          <div class="column">
+            <h2 id = "countyTitle">County Comparison</h2>
+          <div class = "flexRow">
+            <div class = "threeColumn">
+              <select id="dropdownCounty1"></select>
+              <p class="statTitle">Population</p>
+              <p id = "population1" class="countyNum"></p>
+              <p class="statTitle">Confirmed Cases</p>
+              <p id = "cases1" class="countyNum"></p>
+              <p class="statTitle">Propotional Cases</p>
+              <p id = "prop1" class="countyNum"></p>
+            </div>
+            <div class = "threeColumn">
+              <select id="dropdownCounty2"></select>
+              <p class="statTitle">Population</p>
+              <p id = "population2" class="countyNum"></p>
+              <p class="statTitle">Confirmed Cases</p>
+              <p id = "cases2" class="countyNum"></p>
+              <p class="statTitle">Propotional Cases</p>
+              <p id = "prop2" class="countyNum"></p>
+            </div>
+            <div class="threeColumn">
+              <select id="dropdownCounty3"></select>
+              <p class="statTitle">Population</p>
+              <p id = "population3" class="countyNum"></p>
+              <p class="statTitle">Confirmed Cases</p>
+              <p id = "cases3" class="countyNum"></p>
+              <p class="statTitle">Propotional Cases</p>
+              <p id = "prop3" class="countyNum"></p>
+            </div>
+          </div>
+          <p id ="highestCounty">Highest here</p>
+          <p id = "lowestCounty">Lowest rate county here</p>
+        </div>
+      </div>
+    <p id = "dataSource">*Live data from Ireland's COVID-19 Data Hub at <a href="https://covid19ireland-geohive.hub.arcgis.com/">https://covid19ireland-geohive.hub.arcgis.com/</a></p>
+    <footer>
+      <p>made by Ross Sherlock</p>
+      <!-- Github icon from https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png -->
+      <a href="https://github.com/Ross-Sherlock" target="_blank" id="github">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="Github logo" style="width:50px;"></a>
+  </footer>
+  </body>
+</html>

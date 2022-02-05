@@ -1,0 +1,206 @@
+:root {
+    --bgclr: #f5f5f5
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #388087;
+}
+
+header {
+  height:10vh;
+  background-color: darkslategrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pageContainer {
+  background: white;
+  list-style: none;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+  background-color: darkslategrey;
+  color: rgb(226, 224, 218);
+  vertical-align: middle;
+}
+
+#dropdownItems {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+#totalAdmin, #totalWeekly {
+    height:10vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+  .column {
+    background-color: var(--bgclr);
+    flex: 0 1 100%;
+    flex-wrap: wrap;
+    margin: 1.5rem 1rem 1rem 1.5rem;
+    border:1px solid #BADFE7;
+    border-radius: 25px;
+    text-align: center;
+
+  }
+
+  .total-title {
+      margin-top: 20px;
+      font-size:18px;
+      font-weight: bold;
+
+  }
+
+  .number {
+      font-size: 30px;
+      margin-bottom: 20px;
+  }
+  
+  #biotechCompanies {
+    height:10vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  #totalWeekly { 
+      padding-top: 100px;
+      padding-bottom: 100px;
+  }
+
+  .four-column {
+    background-color: var(--bgclr);
+    flex: 0 1 20%;
+    flex-wrap: wrap;
+    margin: 1.5rem 1rem 1rem 1.5rem;
+    border-radius: 25px;
+    text-align: center;
+
+  }
+
+  .bioNum {
+      font-size: 20px;
+      font-weight: normal;
+  }
+
+  #ageTitle {
+    font-size: 18px;
+  }
+
+  .flexRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+
+  }
+  
+  .ageColumn {
+    flex: 20%;
+    max-width: 25%;
+    background-color: var(--bgclr);
+    flex-wrap: wrap;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  .ageRange {
+      font-weight: bold;
+      font-size: 15px;
+      margin-top: 5%;
+  }
+
+  .ageNum {
+      font-size: 20px;
+      margin-bottom: 5%;
+  }
+
+  .threeColumn {
+    background-color: var(--bgclr);
+    flex: 0 1 20%;
+    flex-wrap: wrap;
+    margin: 1.5rem 1rem 1rem 1.5rem;
+    border-radius: 25px;
+  }
+
+  #countyTitle {
+      margin-top: 15px;
+      font-size: 20px;
+  }
+
+  #lowestCounty {
+      margin-bottom: 20px;
+  }
+
+  #dropdownCounty1, #dropdownCounty2, #dropdownCounty3 {
+      font-size: 18px;
+  }
+
+  #countyContainer {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  .countyNum {
+    font-size: 20px;
+  }
+
+  .statTitle {
+    font-weight: bold;
+    margin-top: 20%;
+  }
+
+  #github {
+    filter: invert(98%) sepia(0%) saturate(269%) 
+    hue-rotate(71deg) brightness(115%) contrast(92%);
+    position: absolute;
+    padding-bottom: 0px;
+    margin-bottom: 1rem;
+    margin-right: 1vw;
+    right: 0;
+    bottom: 0;
+  }
+
+  footer {
+    height: 6rem;
+    background-color: darkslategrey;
+    position: relative;
+    margin-top: 10%;
+}
+
+footer p {
+    position: absolute;
+    color: white;
+    margin-left: 1em;
+    bottom: 0;
+    margin-bottom: 2rem;
+}
+
+#dataSource {
+  text-align: center;
+}
+
+.failed {
+  height:0;
+  width: 0;
+  margin: 0;
+  visibility: hidden;
+}
